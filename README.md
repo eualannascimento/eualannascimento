@@ -2,8 +2,8 @@
 I’m critical, organized, flexible, and collaborative.  <br/>
 I enjoy creating solutions, automating processes, embracing challenges, and helping people.
 
-Multidisciplinary experience:  <br/>
-Customer service, Project management, Technical support, Data analysis, and Business Intelligence
+Multidisciplinary experience:
+- Customer service, Project management, Technical support, Data analysis, and Business Intelligence
 
 Technical expertise: 
 - Data visualization: Power BI and Looker
@@ -32,8 +32,8 @@ I work with a focus on efficiency, results impact, and continuous learning.
 Sou crítico, organizado, flexível e colaborativo.  <br/>
 Gosto de criar soluções, automatizar processos, encarar desafios e ajudar pessoas.
 
-Atuação multidisciplinar:  <br/>
-Atendimento ao cliente, Gestão de projetos, Suporte técnico, Análise de dados e Business Intelligence
+Atuação multidisciplinar:
+- Atendimento ao cliente, Gestão de projetos, Suporte técnico, Análise de dados e Business Intelligence
 
 Experiência técnica: 
 - Visualização de dados: Power BI e Looker
