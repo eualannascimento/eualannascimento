@@ -8,7 +8,7 @@ Sou crítico, organizado, flexível e colaborativo. Gosto de criar soluções, a
 
 ### **Experiência Técnica:**
 - **Visualização de dados**: `Power BI` e `Looker Studio (Data Studio)`
-- **Manipulação e análise de dados**: `SQL`, `Databricks`, `Teradata`, `DAX`, `Python`, `SAS`, `PySpark`, `Excel/VBA` e `Google Sheets`
+- **Análise de dados**: `SQL`, `Databricks`, `Teradata`, `DAX`, `Python`, `SAS`, `PySpark`, `Excel/VBA` e `Google Sheets`
 - **Automação**: `Python`, `Power Automate`, `Shell`, `Bash`, `Batch`, `PowerShell` e `VBScript`
 - **Soluções low-code**: `PowerApps` e `SharePoint`
 - **Design e prototipação**: `Figma`
