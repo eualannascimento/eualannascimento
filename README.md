@@ -1,4 +1,4 @@
-[English - US] 
+[English - US] <br/>
 I’m critical, organized, flexible, and collaborative. 
 I enjoy creating solutions, automating processes, embracing challenges, and helping people.
 
@@ -28,7 +28,7 @@ I work with a focus on efficiency, results impact, and continuous learning.
 
 ---
 
-[Português - Brasil] 
+[Português - Brasil] <br/>
 Sou crítico, organizado, flexível e colaborativo. 
 Gosto de criar soluções, automatizar processos, encarar desafios e ajudar pessoas.
 
