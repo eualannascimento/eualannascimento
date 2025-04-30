@@ -1,6 +1,6 @@
 ### **Sobre Mim**
 
-Sou crítico, organizado, flexível e colaborativo. 
+Sou crítico, organizado, flexível e colaborativo. <br/>
 Gosto de criar soluções, automatizar processos, enfrentar desafios e ajudar pessoas.
 
 ### **Atuação Multidisciplinar:**
