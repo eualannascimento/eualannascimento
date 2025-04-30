@@ -1,10 +1,10 @@
 ### **Sobre Mim**
 
-Sou crítico, organizado, flexível e colaborativo. Gosto de criar soluções, automatizar processos, enfrentar desafios e ajudar pessoas.
+Sou crítico, organizado, flexível e colaborativo. 
+Gosto de criar soluções, automatizar processos, enfrentar desafios e ajudar pessoas.
 
 ### **Atuação Multidisciplinar:**
 - Atendimento ao cliente, Gestão de projetos, Suporte técnico, Análise de dados e Business Intelligence
-
 
 ### **Experiência Técnica:**
 - **Visualização de dados**: `Power BI` e `Looker Studio (Data Studio)`
