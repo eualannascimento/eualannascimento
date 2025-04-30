@@ -1,19 +1,34 @@
-### Minhas habilidades e conhecimentos 🛠️
+### **Sobre Mim**
 
- - **Línguas**: `Português (Nativo)` e `Inglês`
- - **Programação**: `Python`, `Javascript`, `SQL` e `SAS`
- - **Automação & Scripting**: `Powershell`, `VBScript`, `Bash` e `Batch`
- - **Visualização de Dados**: `Power BI` e `Google Data Studio (Looker)`
- - **Soluções colaborativas**: `Sharepoint`, `PowerApps` e `Power Automate`
- - **Outras habilidades**: `Google Analytics`, `Figma` e `MS Office`
+Sou crítico, organizado, flexível e colaborativo. Gosto de criar soluções, automatizar processos, enfrentar desafios e ajudar pessoas.
 
-### Últimos projetos pessoais 🎯
+### **Atuação Multidisciplinar:**
+- Atendimento ao cliente
+- Gestão de projetos
+- Suporte técnico
+- Análise de dados
+- Business Intelligence
 
- - **Classifica Vagas** - É uma página web que reúne oportunidades de emprego em diversas empresas, com atualizações diárias. Além de deixá-lo em meu portfólio, este projeto tem o propósito maior de auxiliar aqueles em busca de novas oportunidades profissionais. Ele se divide em 3 repositórios, utilizando Python para fazer o WebScraping e HTML/CSS/JS para apresentar os resultados em uma interface responsiva. - [Link do projeto](https://classificavagas.com/)
- - **Configura Ambiente** - Se resumo em um Script desenvolvido em Powershell que faz o setup (softwares e configurações) do ambiente para trabalho em uma máquina recém formatada. - [Link do repositório](https://github.com/eualannascimento/script-configura-ambiente)
+### **Experiência Técnica:**
+- **Visualização de dados**: `Power BI` e `Looker Studio (Data Studio)`
+- **Manipulação e análise de dados**: `SQL`, `Databricks`, `Teradata`, `DAX`, `Python`, `SAS`, `PySpark`, `Excel/VBA` e `Google Sheets`
+- **Automação**: `Python`, `Power Automate`, `Shell`, `Bash`, `Batch`, `PowerShell` e `VBScript`
+- **Soluções low-code**: `PowerApps` e `SharePoint`
+- **Design e prototipação**: `Figma`
+- **Plataformas colaborativas**: `Confluence`, `Obsidian` e `Notion`
+
+### **Principais Entregas:**
+- Desenvolvimento de aplicativo interno com grande adesão e impacto operacional
+- Automação de processos críticos com redução significativa de tempo e esforço manual
+- Criação de dashboards executivos para suporte à tomada de decisão estratégica
+- Mentoria técnica e profissional de estagiários em SQL, Python e Power BI
+
+### **Formação e Certificações:**
+- Pós-graduação em Engenharia de Dados - Data Science Academy (em andamento)
+- Tecnólogo em Análise e Desenvolvimento de Sistemas - FATEC Ipiranga
+- Certificações: Scrum Foundation (SFPC) e COBIT 5 Foundation
+
+Atuo com foco em eficiência, impacto nos resultados e aprendizado contínuo. Busco sempre entregar soluções relevantes e escaláveis, com mentalidade orientada a dados e melhoria constante.
 
 ### Vamos nos conectar? 🌐
-
 - 🏢 LinkedIn: [eualannascimento](https://www.linkedin.com/in/eualannascimento/)
-
-Obrigado por passar por aqui! 🌟
