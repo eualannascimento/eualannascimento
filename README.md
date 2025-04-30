@@ -1,8 +1,8 @@
 [English - US] <br/>
-I’m critical, organized, flexible, and collaborative. 
+I’m critical, organized, flexible, and collaborative.  <br/>
 I enjoy creating solutions, automating processes, embracing challenges, and helping people.
 
-Multidisciplinary experience: 
+Multidisciplinary experience:  <br/>
 Customer service, Project management, Technical support, Data analysis, and Business Intelligence
 
 Technical expertise: 
@@ -29,10 +29,10 @@ I work with a focus on efficiency, results impact, and continuous learning.
 ---
 
 [Português - Brasil] <br/>
-Sou crítico, organizado, flexível e colaborativo. 
+Sou crítico, organizado, flexível e colaborativo.  <br/>
 Gosto de criar soluções, automatizar processos, encarar desafios e ajudar pessoas.
 
-Atuação multidisciplinar: 
+Atuação multidisciplinar:  <br/>
 Atendimento ao cliente, Gestão de projetos, Suporte técnico, Análise de dados e Business Intelligence
 
 Experiência técnica: 
