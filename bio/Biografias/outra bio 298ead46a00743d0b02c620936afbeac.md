@@ -1,0 +1,8 @@
+# outra bio
+
+– Comecei minha trajetória profissional em 2014, trabalhando com atendimento ao cliente, com mais de 1 ano focado em serviços transacionais e reclamações, adquirindo profundo conhecimento dos produtos e serviços bancários brasileiros.
+– Posteriormente, em 2016, passei em uma vaga interna para atuar com gerenciamento de projetos nas áreas de SAC e Ouvidoria, focado em otimização de processos e eficiência operacional, lá desenvolvi minhas soft skills de análise, priorização, comunicação, delegação e negociação.
+– Após 3 anos, em 2019, com a decisão de atuar com desafios técnicos, obtive a oportunidade de migrar de setor e me tornei um analista de suporte técnico de Infraestrutura de TI, onde prestei suporte técnico a mais de 3000 estações de trabalho e otimizei o serviço de toda a equipe por meio de automações dos fluxos de trabalho.
+– Com esse background, desde 2021, trabalho como analista de dados (business intelligence) focado na criação de soluções colaborativas e geração de relatórios. Essa posição em uma área de negócios me permite mesclar meus conhecimentos de negócios e técnicos, permitindo destaque e resultados positivos nos materiais criados.
+
+Me considero um profissional de fácil adaptação a novos desafios e ferramentas, e atualmente trago em meu "canivete suiço profissional" as seguintes hardskills: Python, Javascript, SQL, SAS, Powershell, VBScript, Bash, Batch, Power BI, Google Data Studio, Sharepoint, PowerApps, Power Automate, Google Analytics, Figma, MS Office.

@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plano de Carreira — Alan Nascimento</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        /* ── Reset & base ── */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --ink: #0f172a;
+            --ink2: #334155;
+            --ink3: #64748b;
+            --line: #e2e8f0;
+            --violet: #6366f1;
+            --violet-light: #eef2ff;
+            --cyan: #0891b2;
+            --cyan-light: #ecfeff;
+            --green: #059669;
+            --green-light: #ecfdf5;
+            --amber: #d97706;
+            --amber-light: #fffbeb;
+            --rose: #e11d48;
+            --rose-light: #fff1f2;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            font-size: 10pt;
+            line-height: 1.55;
+            color: var(--ink);
+            background: #fff;
+            padding: 0;
+        }
+
+        /* ── Screen preview wrapper ── */
+        .page-wrapper {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 2.5rem;
+        }
+
+        /* ── Print button (hidden on print) ── */
+        .print-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 1.25rem;
+            background: #f8fafc;
+            border: 1px solid var(--line);
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            font-size: 0.85rem;
+            color: var(--ink2);
+        }
+
+        .btn-print {
+            background: var(--violet);
+            color: #fff;
+            border: none;
+            padding: 0.45rem 1.1rem;
+            border-radius: 7px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .btn-print:hover {
+            opacity: 0.85;
+        }
+
+        /* ── Header ── */
+        .doc-header {
+            border-bottom: 2px solid var(--ink);
+            padding-bottom: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .doc-header .name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 22pt;
+            font-weight: 800;
+            letter-spacing: -1px;
+            line-height: 1;
+        }
+
+        .doc-header .subtitle {
+            font-size: 10pt;
+            color: var(--ink3);
+            margin-top: 0.2rem;
+            font-weight: 400;
+        }
+
+        .doc-header .meta {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 0.75rem;
+            flex-wrap: wrap;
+        }
+
+        .doc-header .meta-item {
+            font-size: 8.5pt;
+            color: var(--ink3);
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .doc-header .meta-item strong {
+            color: var(--ink2);
+        }
+
+        /* ── Identity box ── */
+        .identity-box {
+            background: var(--violet-light);
+            border-left: 3px solid var(--violet);
+            border-radius: 0 6px 6px 0;
+            padding: 0.7rem 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 9pt;
+            color: var(--ink2);
+            line-height: 1.6;
+        }
+
+        .identity-box strong {
+            color: var(--violet);
+        }
+
+        /* ── Section heading ── */
+        .sec {
+            margin-top: 1.5rem;
+            break-inside: avoid;
+        }
+
+        .sec-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 10pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--ink3);
+            border-bottom: 1px solid var(--line);
+            padding-bottom: 0.3rem;
+            margin-bottom: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        /* ── Direction block ── */
+        .direction-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 15pt;
+            font-weight: 800;
+            color: var(--violet);
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+        }
+
+        .roles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.35rem;
+            margin-bottom: 0.65rem;
+        }
+
+        .role-chip {
+            font-size: 8pt;
+            font-weight: 600;
+            background: var(--violet-light);
+            color: var(--violet);
+            border: 1px solid #c7d2fe;
+            border-radius: 4px;
+            padding: 0.2rem 0.55rem;
+        }
+
+        .direction-body {
+            font-size: 9pt;
+            color: var(--ink2);
+            line-height: 1.65;
+            background: #fafafa;
+            border-radius: 6px;
+            padding: 0.65rem 0.85rem;
+            border: 1px solid var(--line);
+        }
+
+        /* ── Pillars grid ── */
+        .pillars {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.6rem;
+        }
+
+        .pillar {
+            border-radius: 6px;
+            padding: 0.65rem 0.85rem;
+            border: 1px solid;
+            break-inside: avoid;
+        }
+
+        .pillar-bi {
+            background: var(--violet-light);
+            border-color: #c7d2fe;
+        }
+
+        .pillar-eng {
+            background: var(--cyan-light);
+            border-color: #a5f3fc;
+        }
+
+        .pillar-infra {
+            background: var(--green-light);
+            border-color: #a7f3d0;
+        }
+
+        .pillar-auto {
+            background: var(--amber-light);
+            border-color: #fde68a;
+        }
+
+        .pillar-head {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.45rem;
+        }
+
+        .pillar-icon {
+            font-size: 12pt;
+        }
+
+        .pillar-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 9.5pt;
+            font-weight: 700;
+        }
+
+        .pillar-bi .pillar-name {
+            color: var(--violet);
+        }
+
+        .pillar-eng .pillar-name {
+            color: var(--cyan);
+        }
+
+        .pillar-infra .pillar-name {
+            color: var(--green);
+        }
+
+        .pillar-auto .pillar-name {
+            color: var(--amber);
+        }
+
+        .pillar-status {
+            font-size: 7.5pt;
+            color: var(--ink3);
+        }
+
+        .tags-print {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.25rem;
+        }
+
+        .tag-print {
+            font-size: 7.5pt;
+            font-weight: 500;
+            padding: 0.15rem 0.45rem;
+            border-radius: 3px;
+        }
+
+        .tag-violet {
+            background: #e0e7ff;
+            color: #4338ca;
+        }
+
+        .tag-cyan {
+            background: #cffafe;
+            color: #0e7490;
+        }
+
+        .tag-green {
+            background: #d1fae5;
+            color: #047857;
+        }
+
+        .tag-amber {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        /* ── Soft skills ── */
+        .skills-wrap {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.6rem;
+        }
+
+        .skills-group {
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            padding: 0.65rem 0.85rem;
+            break-inside: avoid;
+        }
+
+        .skills-group-title {
+            font-size: 7.5pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--ink3);
+            margin-bottom: 0.5rem;
+        }
+
+        .skill-row {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.4rem;
+        }
+
+        .skill-name {
+            font-size: 8.5pt;
+            flex: 1;
+            color: var(--ink2);
+        }
+
+        .skill-track {
+            width: 70px;
+            height: 5px;
+            background: var(--line);
+            border-radius: 100px;
+            flex-shrink: 0;
+        }
+
+        .skill-fill {
+            height: 100%;
+            border-radius: 100px;
+        }
+
+        .fill-green {
+            background: var(--green);
+        }
+
+        .fill-violet {
+            background: var(--violet);
+        }
+
+        .fill-amber {
+            background: var(--amber);
+        }
+
+        .fill-cyan {
+            background: var(--cyan);
+        }
+
+        /* ── Timeline ── */
+        .timeline {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0.6rem;
+        }
+
+        .tl-item {
+            border-radius: 6px;
+            padding: 0.65rem 0.85rem;
+            border: 1px solid;
+            break-inside: avoid;
+        }
+
+        .tl-short {
+            border-color: #a7f3d0;
+            background: var(--green-light);
+        }
+
+        .tl-medium {
+            border-color: #c7d2fe;
+            background: var(--violet-light);
+        }
+
+        .tl-long {
+            border-color: #ddd6fe;
+            background: #f5f3ff;
+        }
+
+        .tl-period {
+            font-size: 7pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.07em;
+            margin-bottom: 0.35rem;
+        }
+
+        .tl-short .tl-period {
+            color: var(--green);
+        }
+
+        .tl-medium .tl-period {
+            color: var(--violet);
+        }
+
+        .tl-long .tl-period {
+            color: #7c3aed;
+        }
+
+        .tl-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 9.5pt;
+            font-weight: 700;
+            margin-bottom: 0.45rem;
+            color: var(--ink);
+        }
+
+        .tl-list {
+            list-style: none;
+        }
+
+        .tl-list li {
+            font-size: 8pt;
+            color: var(--ink2);
+            padding: 0.18rem 0;
+            display: flex;
+            gap: 0.4rem;
+        }
+
+        .tl-list li::before {
+            content: '→';
+            opacity: 0.45;
+            flex-shrink: 0;
+        }
+
+        /* ── Positioning ── */
+        .pos-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.55rem;
+        }
+
+        .pos-card {
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            padding: 0.65rem 0.6rem;
+            text-align: center;
+            break-inside: avoid;
+        }
+
+        .pos-card .p-icon {
+            font-size: 14pt;
+            margin-bottom: 0.3rem;
+        }
+
+        .pos-card h4 {
+            font-size: 8.5pt;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 0.25rem;
+        }
+
+        .pos-card p {
+            font-size: 7.5pt;
+            color: var(--ink3);
+            line-height: 1.5;
+        }
+
+        /* ── Actions ── */
+        .actions-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 0.6rem;
+        }
+
+        .action-card {
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            padding: 0.65rem 0.85rem;
+            break-inside: avoid;
+        }
+
+        .action-card h4 {
+            font-size: 8.5pt;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 0.35rem;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .action-card p {
+            font-size: 7.8pt;
+            color: var(--ink2);
+            line-height: 1.6;
+        }
+
+        /* ── Personal ── */
+        .personal-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.5rem;
+        }
+
+        .p-card {
+            background: #fafafa;
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            padding: 0.6rem;
+            break-inside: avoid;
+        }
+
+        .p-card .p-em {
+            font-size: 11pt;
+            margin-bottom: 0.3rem;
+            display: block;
+        }
+
+        .p-card h5 {
+            font-size: 8.5pt;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 0.2rem;
+        }
+
+        .p-card p {
+            font-size: 7.5pt;
+            color: var(--ink3);
+            line-height: 1.5;
+        }
+
+        /* ── Library ── */
+        .library-print {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.6rem;
+            margin-top: 0.5rem;
+        }
+
+        .lib-cat {
+            border: 1px solid var(--line);
+            border-radius: 6px;
+            padding: 0.65rem 0.85rem;
+            break-inside: avoid;
+        }
+
+        .lib-cat h4 {
+            font-size: 8.5pt;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 0.45rem;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+
+        .book-print {
+            margin-bottom: 0.45rem;
+            padding-bottom: 0.45rem;
+            border-bottom: 1px solid #f1f5f9;
+        }
+
+        .book-print:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .book-print strong {
+            display: block;
+            font-size: 8pt;
+            color: var(--ink);
+        }
+
+        .book-print span {
+            font-size: 7.2pt;
+            color: var(--ink3);
+        }
+
+        /* ── Footer ── */
+        .doc-footer {
+            margin-top: 1.5rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--line);
+            font-size: 8pt;
+            color: var(--ink3);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        /* ══════════════════════════════════════
+       PRINT STYLES
+    ══════════════════════════════════════ */
+        @media print {
+            body {
+                font-size: 9pt;
+            }
+
+            .page-wrapper {
+                max-width: 100%;
+                padding: 0;
+            }
+
+            .print-bar {
+                display: none !important;
+            }
+
+            @page {
+                size: A4;
+                margin: 14mm 16mm 14mm 16mm;
+            }
+
+            /* Avoid orphans */
+            h1,
+            h2,
+            h3,
+            h4 {
+                break-after: avoid;
+            }
+
+            .sec,
+            .pillar,
+            .tl-item,
+            .pos-card,
+            .action-card,
+            .p-card,
+            .skills-group {
+                break-inside: avoid;
+            }
+
+            /* Force page break before personal section */
+            .page-break-before {
+                break-before: page;
+            }
+
+            /* Keep colors even in print */
+            * {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-wrapper">
+
+        <!-- Print bar (screen only) -->
+        <div class="print-bar">
+            <span>📄 Versão para impressão · Recomendo salvar como PDF (Ctrl/Cmd+P → "Salvar como PDF")</span>
+            <button class="btn-print" onclick="window.print()">🖨️ Imprimir / Salvar PDF</button>
+        </div>
+
+        <!-- Header -->
+        <div class="doc-header">
+            <div class="name">Alan Nascimento</div>
+            <div class="subtitle">Plano de Carreira Consolidado · 2025–2028</div>
+            <div class="meta">
+                <div class="meta-item">🎯 <strong>Direção:</strong> AI Data Engineer · Tech Lead · Data Product Owner
+                </div>
+                <div class="meta-item">📅 <strong>Horizonte:</strong> 3–5 anos</div>
+                <div class="meta-item">🗓️ <strong>Atualizado:</strong> Fevereiro / 2026</div>
+            </div>
+        </div>
+
+        <!-- Identity -->
+        <div class="identity-box">
+            <strong>Declaração de identidade:</strong> Analista de dados generalista com foco em automação, engenharia
+            de dados e BI. Transforma processos complexos em soluções técnicas escaláveis — integrando SQL, Python,
+            Fabric, AI Engineering e
+            infraestrutura moderna para entregar impacto real e reutilizável.
+        </div>
+
+        <!-- Direção -->
+        <div class="sec">
+            <div class="sec-title">🎯 Direção Principal</div>
+            <div class="direction-title">AI Data Engineer · Tech Lead · Data Product Owner</div>
+            <div class="roles">
+                <span class="role-chip">Liderança técnica de dados</span>
+                <span class="role-chip">Automação corporativa</span>
+                <span class="role-chip">Engenharia de dados (Fabric)</span>
+                <span class="role-chip">AI Engineering</span>
+                <span class="role-chip">Soluções ponta-a-ponta</span>
+                <span class="role-chip">Referência BI + Dados + Automação</span>
+            </div>
+            <div class="direction-body">
+                Perfil alvo: <strong>generalista técnico estratégico</strong> — aquele que resolve problemas complexos
+                com múltiplas stacks, conduz soluções de ponta-a-ponta e se torna referência interna na interseção entre
+                dados, automação e produto analítico.
+            </div>
+        </div>
+
+        <!-- Pilares -->
+        <div class="sec">
+            <div class="sec-title">🧱 Pilares Técnicos</div>
+            <div class="pillars">
+
+                <div class="pillar pillar-bi">
+                    <div class="pillar-head">
+                        <span class="pillar-icon">📊</span>
+                        <div>
+                            <div class="pillar-name">BI & Analytics</div>
+                            <div class="pillar-status">Base forte · Em consolidação</div>
+                        </div>
+                    </div>
+                    <div class="tags-print">
+                        <span class="tag-print tag-violet">Power BI Avançado</span>
+                        <span class="tag-print tag-violet">DAX Avançado</span>
+                        <span class="tag-print tag-violet">Modelagem Semântica</span>
+                        <span class="tag-print tag-violet">Performance Tuning</span>
+                        <span class="tag-print tag-violet">Templates Reutilizáveis</span>
+                        <span class="tag-print tag-violet">Storytelling Analítico</span>
+                        <span class="tag-print tag-violet">Design de Dashboards</span>
+                        <span class="tag-print tag-violet">Certificação PL-300</span>
+                    </div>
+                </div>
+
+                <div class="pillar pillar-eng">
+                    <div class="pillar-head">
+                        <span class="pillar-icon">⚙️</span>
+                        <div>
+                            <div class="pillar-name">Engenharia de Dados</div>
+                            <div class="pillar-status">DSA (Data Science Academy) · Pós</div>
+                        </div>
+                    </div>
+                    <div class="tags-print">
+                        <span class="tag-print tag-cyan">Python Pipelines</span>
+                        <span class="tag-print tag-cyan">SQL Avançado</span>
+                        <span class="tag-print tag-cyan">Databricks</span>
+                        <span class="tag-print tag-cyan">Microsoft Fabric</span>
+                        <span class="tag-print tag-cyan">AI Engineering</span>
+                        <span class="tag-print tag-cyan">Orquestração</span>
+                        <span class="tag-print tag-cyan">Data Quality</span>
+                        <span class="tag-print tag-cyan">Versionamento</span>
+                    </div>
+                </div>
+
+                <div class="pillar pillar-infra">
+                    <div class="pillar-head">
+                        <span class="pillar-icon">🐳</span>
+                        <div>
+                            <div class="pillar-name">Infraestrutura & Dev</div>
+                            <div class="pillar-status">Em aprendizado · Stack gradual</div>
+                        </div>
+                    </div>
+                    <div class="tags-print">
+                        <span class="tag-print tag-green">Docker</span>
+                        <span class="tag-print tag-green">Kubernetes</span>
+                        <span class="tag-print tag-green">Terraform</span>
+                        <span class="tag-print tag-green">Git Avançado</span>
+                        <span class="tag-print tag-green">CI/CD de Dados</span>
+                        <span class="tag-print tag-green">Ambientes Reprodutíveis</span>
+                    </div>
+                </div>
+
+                <div class="pillar pillar-auto">
+                    <div class="pillar-head">
+                        <span class="pillar-icon">⚡</span>
+                        <div>
+                            <div class="pillar-name">Automação Corporativa</div>
+                            <div class="pillar-status">Diferencial forte · Em expansão</div>
+                        </div>
+                    </div>
+                    <div class="tags-print">
+                        <span class="tag-print tag-amber">Power Automate</span>
+                        <span class="tag-print tag-amber">Power Apps</span>
+                        <span class="tag-print tag-amber">APIs</span>
+                        <span class="tag-print tag-amber">Python & Bash</span>
+                        <span class="tag-print tag-amber">PowerShell</span>
+                        <span class="tag-print tag-amber">Bots de Processo</span>
+                        <span class="tag-print tag-amber">Automações Multi-sistema</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="sec">
+            <div class="sec-title">🧠 Competências Humanas</div>
+            <div class="skills-wrap">
+                <div class="skills-group">
+                    <div class="skills-group-title">Hoje — já consolidado</div>
+                    <div class="skill-row">
+                        <span class="skill-name">Resolução de problemas</span>
+                        <div class="skill-track">
+                            <div class="skill-fill fill-green" style="width:95%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">Organização & método</span>
+                        <div class="skill-track">
+                            <div class="skill-fill fill-green" style="width:90%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">Pensamento crítico</span>
+                        <div class="skill-track">
+                            <div class="skill-fill fill-green" style="width:93%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">Colaboração técnica</span>
+                        <div class="skill-track">
+                            <div class="skill-fill fill-cyan" style="width:82%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">Simplificação de complexidade</span>
+                        <div class="skill-track">
+                            <div class="skill-fill fill-cyan" style="width:85%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skills-group">
+                    <div class="skills-group-title">Foco — em desenvolvimento</div>
+                    <div class="skill-row">
+                        <span class="skill-name">Liderança informal</span>
+                        <div class="skill-track">
+                            <div class="skill-fill fill-amber" style="width:60%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">Mentoria técnica</span>
+                        <div class="skill-track">
+                            <div class="skill-fill fill-amber" style="width:58%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">Comunicação técnica clara</span>
+                        <div class="skill-track">
+                            <div class="skill-fill fill-violet" style="width:72%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">Influência sem autoridade</span>
+                        <div class="skill-track">
+                            <div class="skill-fill fill-amber" style="width:55%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-row">
+                        <span class="skill-name">Documentação técnica</span>
+                        <div class="skill-track">
+                            <div class="skill-fill fill-cyan" style="width:70%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="sec">
+            <div class="sec-title">🗺️ Linha do Tempo</div>
+            <div class="timeline">
+
+                <div class="tl-item tl-short">
+                    <div class="tl-period">⏱ H1 2026 · 0–6 meses</div>
+                    <div class="tl-title">Especialização & Automação</div>
+                    <ul class="tl-list">
+                        <li>Cambly: 30min/semana (Native Speakers)</li>
+                        <li>Pós DSA: Eng de Dados (DSA) em andamento</li>
+                        <li>Plataformas: O'Reilly & Coursera</li>
+                        <li>Databricks - Generative AI Fundamentals</li>
+                        <li>Microsoft - DP-900 - Azure Data Fund.</li>
+                        <li>Microsoft - PL-300 - Power BI Associate</li>
+                    </ul>
+                </div>
+                <div class="tl-item tl-medium">
+                    <div class="tl-period">⏳ H2 2026 · 6–12 meses</div>
+                    <div class="tl-title">Engenharia & IA</div>
+                    <ul class="tl-list">
+                        <li>Febraban - FBB-200 - Ouvidoria (Febraban)</li>
+                        <li>Microsoft - AI-900 - Azure AI Fundamentals</li>
+                        <li>Databricks - Data Engineer Associate</li>
+                        <li>2–3 projetos E2E de eng. de dados</li>
+                        <li>GitHub como vitrine técnica</li>
+                        <li>Automações avançadas integradas</li>
+                    </ul>
+                </div>
+                <div class="tl-item tl-long">
+                    <div class="tl-period">🕰 Estratégico · 18–36 meses</div>
+                    <div class="tl-title">Referência & AI Engineer</div>
+                    <ul class="tl-list">
+                        <li>Mentoria Estratégica (Ex: Luciano Santos)</li>
+                        <li>Microsoft - DP-600 - Fabric Analytics</li>
+                        <li>Microsoft - DP-700 - Fabric Data Engineer</li>
+                        <li>Microsoft - AI-102 - Azure AI Engineer</li>
+                        <li>Autoridade Automação + Dados + IA</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Biblioteca -->
+        <div class="sec">
+            <div class="sec-title">📚 Biblioteca Técnica & Pessoal</div>
+            <div class="library-print">
+                <!-- Engenharia de Dados & IA -->
+                <div class="lib-cat">
+                    <h4>⚙️ Engenharia de Dados & IA</h4>
+                    <div class="book-print">
+                        <strong>AI Engineering: Building Apps with Foundation Models</strong>
+                        <span>Chip Huyen · Guia essencial para aplicações modernas com LLMs.</span>
+                    </div>
+                    <div class="book-print">
+                        <strong>Fundamentos de Engenharia de Dados</strong>
+                        <span>Joe Reis & Matt Housley · A "bíblia" de sistemas de dados robustos.</span>
+                    </div>
+                    <div class="book-print">
+                        <strong>Fundamentos da Qualidade de Dados</strong>
+                        <span>Barr Moses et al. · Pipelines confiáveis e observabilidade.</span>
+                    </div>
+                    <div class="book-print">
+                        <strong>Decifrando Arquiteturas de Dados</strong>
+                        <span>James Serra · Warehouse, Fabric, Lakehouse e Mesh.</span>
+                    </div>
+                </div>
+
+                <!-- Desenvolvimento Pessoal -->
+                <div class="lib-cat">
+                    <h4>🧠 Desenvolvimento Pessoal</h4>
+                    <div class="book-print">
+                        <strong>Antifrágil: Coisas que se beneficiam com o caos</strong>
+                        <span>Nassim Nicholas Taleb · Prosperidade em ambientes incertos.</span>
+                    </div>
+                    <div class="book-print">
+                        <strong>12 Regras Para a Vida: Um Antídoto Para o Caos</strong>
+                        <span>Jordan B. Peterson · Princípios para responsabilidade pessoal.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Posicionamento -->
+        <div class="sec">
+            <div class="sec-title">🧩 Posicionamento Profissional</div>
+            <div class="pos-grid">
+                <div class="pos-card">
+                    <div class="p-icon">🔧</div>
+                    <h4>Resolvedor Independente</h4>
+                    <p>Usa qualquer ferramenta necessária. Não limitado por stack.</p>
+                </div>
+                <div class="pos-card">
+                    <div class="p-icon">⚡</div>
+                    <h4>Construtor de Automações</h4>
+                    <p>Elimina trabalho manual. Escala processos corporativos.</p>
+                </div>
+                <div class="pos-card">
+                    <div class="p-icon">🔗</div>
+                    <h4>Integrador de Áreas</h4>
+                    <p>Conecta dados, processo e ferramenta. Entrega solução completa.</p>
+                </div>
+                <div class="pos-card">
+                    <div class="p-icon">✖️</div>
+                    <h4>Multiplicador</h4>
+                    <p>Cria dashboards e automações que escalam o próprio impacto.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ações práticas -->
+        <div class="sec">
+            <div class="sec-title">🛠️ Ações Práticas Definidas</div>
+            <div class="actions-grid">
+                <div class="action-card">
+                    <h4>📐 Técnicas</h4>
+                    <p>Template Power BI reutilizável · Workflow padrão de dashboards · Projeto Docker + Python ·
+                        Automação com API · Pipeline versionado · Projeto Databricks · Scripts utilitários públicos</p>
+                </div>
+                <div class="action-card">
+                    <h4>💼 Portfólio</h4>
+                    <p>Repositórios organizados · Projetos demonstráveis · READMEs técnicos claros · Exemplos end-to-end
+                        · Projetos de automação · Projeto de classificação de vagas</p>
+                </div>
+                <div class="action-card">
+                    <h4>📈 Crescimento</h4>
+                    <p>Inglês técnico contínuo · Revisão semanal de roadmap · Estudo estruturado · Mentoria de juniores
+                        · Documentação de aprendizados · Obsidian como base de conhecimento</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dimensão Pessoal -->
+        <div class="sec page-break-before">
+            <div class="sec-title">👤 Dimensão Pessoal · Sustento da Evolução Técnica</div>
+            <div class="personal-grid">
+                <div class="p-card">
+                    <span class="p-em">🏋️</span>
+                    <h5>Energia Física</h5>
+                    <p>Vida ativa, massa muscular e resistência como base de performance cognitiva.</p>
+                </div>
+                <div class="p-card">
+                    <span class="p-em">🧘</span>
+                    <h5>Clareza Mental</h5>
+                    <p>Sono, nutrição funcional, hidratação e controle de fadiga mental.</p>
+                </div>
+                <div class="p-card">
+                    <span class="p-em">⏰</span>
+                    <h5>Rotina Intencional</h5>
+                    <p>Pausas, mobilidade, blocos de estudo e gestão de energia diária.</p>
+                </div>
+                <div class="p-card">
+                    <span class="p-em">🌐</span>
+                    <h5>Inglês Técnico</h5>
+                    <p>Prática contínua para contextos internacionais e técnicos.</p>
+                </div>
+                <div class="p-card">
+                    <span class="p-em">🗂️</span>
+                    <h5>Gestão do Conhecimento</h5>
+                    <p>Obsidian e revisão semanal de aprendizados e roadmap.</p>
+                </div>
+                <div class="p-card">
+                    <span class="p-em">🤝</span>
+                    <h5>Mentoria & Ensino</h5>
+                    <p>Orientar juniores reforça o domínio e desenvolve liderança natural.</p>
+                </div>
+                <div class="p-card">
+                    <span class="p-em">🎯</span>
+                    <h5>Constância</h5>
+                    <p>Disciplina de estudo, clareza de metas e revisão contínua do roadmap.</p>
+                </div>
+                <div class="p-card">
+                    <span class="p-em">🔍</span>
+                    <h5>Perfil Autodidata</h5>
+                    <p>Orientado a melhoria contínua, construtor de soluções end-to-end.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="doc-footer">
+            <span>Alan Nascimento · Plano de Carreira 2025–2028</span>
+            <span>Confidencial · Fevereiro de 2026</span>
+        </div>
+
+    </div>
+</body>
+
+</html>

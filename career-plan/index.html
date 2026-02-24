@@ -1,0 +1,1563 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plano de Carreira — Alan Nascimento</title>
+  <meta name="description"
+    content="Plano de carreira consolidado de Alan Nascimento: Tech Lead, Engenharia de Dados, BI e Automação." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;600;700;800&display=swap"
+    rel="stylesheet" />
+  <style>
+    :root {
+      --bg: #0a0e1a;
+      --bg2: #0f1525;
+      --bg3: #151c30;
+      --accent: #6366f1;
+      --accent2: #8b5cf6;
+      --accent3: #06b6d4;
+      --accent4: #10b981;
+      --accent5: #f59e0b;
+      --accent6: #f43f5e;
+      --text: #e2e8f0;
+      --text2: #94a3b8;
+      --text3: #64748b;
+      --border: rgba(99, 102, 241, 0.15);
+      --card: rgba(15, 21, 37, 0.8);
+      --glass: rgba(255, 255, 255, 0.04);
+      --glow: rgba(99, 102, 241, 0.3);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── Background mesh ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 50% at 20% -10%, rgba(99, 102, 241, 0.12) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 40% at 80% 100%, rgba(139, 92, 246, 0.10) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 60% at 50% 50%, rgba(6, 182, 212, 0.04) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Grid lines ── */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(99, 102, 241, 0.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(99, 102, 241, 0.04) 1px, transparent 1px);
+      background-size: 64px 64px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── Navigation ── */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      backdrop-filter: blur(20px);
+      background: rgba(10, 14, 26, 0.85);
+      border-bottom: 1px solid var(--border);
+      padding: 0 2rem;
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .nav-brand {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 1rem;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 0.25rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--text2);
+      text-decoration: none;
+      padding: 0.4rem 0.75rem;
+      border-radius: 8px;
+      transition: all 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+      background: var(--glass);
+    }
+
+    /* ── Main wrapper ── */
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 100px 2rem 6rem;
+    }
+
+    /* ── Hero ── */
+    .hero {
+      text-align: center;
+      padding: 4rem 0 5rem;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(99, 102, 241, 0.12);
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 100px;
+      padding: 0.4rem 1rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #a5b4fc;
+      margin-bottom: 2rem;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .hero-badge .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent4);
+      box-shadow: 0 0 8px var(--accent4);
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+
+      50% {
+        opacity: 0.5;
+        transform: scale(0.8);
+      }
+    }
+
+    .hero h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2.6rem, 6vw, 4.2rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -2px;
+      animation: fadeUp 0.6s 0.1s ease both;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(135deg, #818cf8, #a78bfa, #38bdf8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-sub {
+      margin-top: 1.5rem;
+      font-size: 1.1rem;
+      color: var(--text2);
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.65;
+      animation: fadeUp 0.6s 0.2s ease both;
+    }
+
+    .hero-identity {
+      margin-top: 2.5rem;
+      display: inline-block;
+      padding: 1.25rem 2rem;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      font-size: 0.92rem;
+      line-height: 1.7;
+      color: var(--text2);
+      max-width: 680px;
+      animation: fadeUp 0.6s 0.3s ease both;
+    }
+
+    .hero-identity strong {
+      color: var(--text);
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 3.5rem;
+      flex-wrap: wrap;
+      animation: fadeUp 0.6s 0.4s ease both;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-family: 'Outfit', sans-serif;
+      font-size: 2rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--accent), var(--accent3));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .stat-label {
+      font-size: 0.78rem;
+      color: var(--text3);
+      margin-top: 0.2rem;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    /* ── Library Section ── */
+    .library-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .library-category {
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 1.5rem;
+    }
+
+    .library-category h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.1rem;
+      color: var(--text);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .book-item {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .book-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+
+    .book-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .book-info h4 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 0.2rem;
+    }
+
+    .book-info p {
+      font-size: 0.78rem;
+      color: var(--text2);
+      line-height: 1.5;
+    }
+
+    /* ── Section titles ── */
+    .section {
+      margin-top: 5rem;
+      animation: fadeUp 0.6s ease both;
+    }
+
+    .section-label {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+
+    .section-label .icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .section-label h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .section-label p {
+      font-size: 0.82rem;
+      color: var(--text3);
+      margin-top: 0.15rem;
+    }
+
+    /* ── Cards grid ── */
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(99, 102, 241, 0.35);
+    }
+
+    .card:hover::before {
+      opacity: 1;
+    }
+
+    .card-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      margin-bottom: 1rem;
+    }
+
+    .card h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      font-size: 0.82rem;
+      color: var(--text2);
+      line-height: 1.6;
+    }
+
+    /* ── Pillars ── */
+    .pillar-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 1.75rem;
+      transition: all 0.3s;
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .pillar-card .accent-line {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 3px;
+      border-radius: 2px 0 0 2px;
+    }
+
+    .pillar-header {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .pillar-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .pillar-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .pillar-sub {
+      font-size: 0.78rem;
+      color: var(--text3);
+      margin-top: 0.1rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.5rem;
+    }
+
+    .tag {
+      font-size: 0.73rem;
+      font-weight: 500;
+      padding: 0.3rem 0.65rem;
+      border-radius: 6px;
+      transition: all 0.2s;
+    }
+
+    .tag:hover {
+      transform: scale(1.05);
+    }
+
+    /* ── Timeline ── */
+    .timeline {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .timeline-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 1.75rem;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .timeline-item:hover {
+      transform: translateY(-4px);
+    }
+
+    .timeline-period {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.73rem;
+      font-weight: 700;
+      padding: 0.35rem 0.75rem;
+      border-radius: 100px;
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .timeline-title {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      margin-bottom: 1rem;
+    }
+
+    .check-list {
+      list-style: none;
+    }
+
+    .check-list li {
+      font-size: 0.82rem;
+      color: var(--text2);
+      padding: 0.35rem 0;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    }
+
+    .check-list li:last-child {
+      border-bottom: none;
+    }
+
+    .check-list li::before {
+      content: '→';
+      opacity: 0.4;
+      font-size: 0.75rem;
+      margin-top: 0.05rem;
+      flex-shrink: 0;
+    }
+
+    /* ── Positioning cards ── */
+    .pos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+
+    .pos-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: all 0.3s;
+      backdrop-filter: blur(10px);
+    }
+
+    .pos-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(99, 102, 241, 0.4);
+    }
+
+    .pos-card .big-icon {
+      font-size: 2.2rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .pos-card h3 {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .pos-card p {
+      font-size: 0.8rem;
+      color: var(--text2);
+      line-height: 1.6;
+    }
+
+    /* ── Soft skills ── */
+    .skill-bar {
+      margin-bottom: 1.1rem;
+    }
+
+    .skill-bar-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.45rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+
+    .bar-track {
+      height: 6px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 100px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 100px;
+      transition: width 1s ease;
+    }
+
+    /* ── Personal section ── */
+    .personal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 0.85rem;
+    }
+
+    .personal-card {
+      background: var(--glass);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 14px;
+      padding: 1.1rem 1.25rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      transition: all 0.2s;
+    }
+
+    .personal-card:hover {
+      background: rgba(255, 255, 255, 0.06);
+      transform: translateY(-2px);
+    }
+
+    .personal-card .em {
+      font-size: 1.3rem;
+      flex-shrink: 0;
+    }
+
+    .personal-card h4 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+
+    .personal-card p {
+      font-size: 0.78rem;
+      color: var(--text2);
+      line-height: 1.5;
+    }
+
+    /* ── Color utilities ── */
+    .c-violet {
+      color: #8b5cf6;
+    }
+
+    .c-indigo {
+      color: #6366f1;
+    }
+
+    .c-cyan {
+      color: #06b6d4;
+    }
+
+    .c-green {
+      color: #10b981;
+    }
+
+    .c-amber {
+      color: #f59e0b;
+    }
+
+    .c-rose {
+      color: #f43f5e;
+    }
+
+    .c-sky {
+      color: #38bdf8;
+    }
+
+    .bg-violet {
+      background: rgba(139, 92, 246, 0.12);
+    }
+
+    .bg-indigo {
+      background: rgba(99, 102, 241, 0.12);
+    }
+
+    .bg-cyan {
+      background: rgba(6, 182, 212, 0.12);
+    }
+
+    .bg-green {
+      background: rgba(16, 185, 129, 0.12);
+    }
+
+    .bg-amber {
+      background: rgba(245, 158, 11, 0.12);
+    }
+
+    .bg-rose {
+      background: rgba(244, 63, 94, 0.12);
+    }
+
+    .bg-sky {
+      background: rgba(56, 189, 248, 0.12);
+    }
+
+    .tag-violet {
+      background: rgba(139, 92, 246, 0.12);
+      color: #a78bfa;
+      border: 1px solid rgba(139, 92, 246, 0.25);
+    }
+
+    .tag-indigo {
+      background: rgba(99, 102, 241, 0.12);
+      color: #a5b4fc;
+      border: 1px solid rgba(99, 102, 241, 0.25);
+    }
+
+    .tag-cyan {
+      background: rgba(6, 182, 212, 0.12);
+      color: #67e8f9;
+      border: 1px solid rgba(6, 182, 212, 0.25);
+    }
+
+    .tag-green {
+      background: rgba(16, 185, 129, 0.12);
+      color: #6ee7b7;
+      border: 1px solid rgba(16, 185, 129, 0.25);
+    }
+
+    .tag-amber {
+      background: rgba(245, 158, 11, 0.12);
+      color: #fcd34d;
+      border: 1px solid rgba(245, 158, 11, 0.25);
+    }
+
+    .tag-rose {
+      background: rgba(244, 63, 94, 0.12);
+      color: #fda4af;
+      border: 1px solid rgba(244, 63, 94, 0.25);
+    }
+
+    .tag-sky {
+      background: rgba(56, 189, 248, 0.12);
+      color: #7dd3fc;
+      border: 1px solid rgba(56, 189, 248, 0.25);
+    }
+
+    .line-violet {
+      background: linear-gradient(180deg, #8b5cf6, #6366f1);
+    }
+
+    .line-cyan {
+      background: linear-gradient(180deg, #06b6d4, #3b82f6);
+    }
+
+    .line-green {
+      background: linear-gradient(180deg, #10b981, #06b6d4);
+    }
+
+    .line-amber {
+      background: linear-gradient(180deg, #f59e0b, #f43f5e);
+    }
+
+    .bar-violet {
+      background: linear-gradient(90deg, #8b5cf6, #6366f1);
+    }
+
+    .bar-cyan {
+      background: linear-gradient(90deg, #06b6d4, #3b82f6);
+    }
+
+    .bar-green {
+      background: linear-gradient(90deg, #10b981, #06b6d4);
+    }
+
+    .bar-amber {
+      background: linear-gradient(90deg, #f59e0b, #f97316);
+    }
+
+    .bar-rose {
+      background: linear-gradient(90deg, #f43f5e, #ec4899);
+    }
+
+    .period-short {
+      background: rgba(16, 185, 129, 0.12);
+      color: #6ee7b7;
+      border: 1px solid rgba(16, 185, 129, 0.25);
+    }
+
+    .period-medium {
+      background: rgba(99, 102, 241, 0.12);
+      color: #a5b4fc;
+      border: 1px solid rgba(99, 102, 241, 0.3);
+    }
+
+    .period-long {
+      background: rgba(139, 92, 246, 0.12);
+      color: #c4b5fd;
+      border: 1px solid rgba(139, 92, 246, 0.3);
+    }
+
+    /* ── Direction card ── */
+    .direction-block {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 2rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 2rem;
+      align-items: start;
+      backdrop-filter: blur(10px);
+    }
+
+    @media (max-width: 640px) {
+      .direction-block {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .direction-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #a5b4fc, #7dd3fc);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.75rem;
+    }
+
+    .direction-roles {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .role-badge {
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.3rem 0.75rem;
+      border-radius: 8px;
+      background: rgba(99, 102, 241, 0.15);
+      color: #a5b4fc;
+      border: 1px solid rgba(99, 102, 241, 0.3);
+    }
+
+    .profile-badge {
+      min-width: 180px;
+      text-align: center;
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(139, 92, 246, 0.1));
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 16px;
+      padding: 1.5rem 1rem;
+    }
+
+    .profile-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .profile-label {
+      font-size: 0.8rem;
+      color: var(--text3);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 0.35rem;
+    }
+
+    .profile-value {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: #a5b4fc;
+      line-height: 1.4;
+    }
+
+    /* ── Divider ── */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border), transparent);
+      margin: 4rem 0;
+    }
+
+    /* ── Footer ── */
+    footer {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.78rem;
+      color: var(--text3);
+      border-top: 1px solid var(--border);
+    }
+
+    /* ── Animations ── */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .aos {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .aos.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── Scroll indicator ── */
+    .scroll-progress {
+      position: fixed;
+      top: 64px;
+      left: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--accent), var(--accent3));
+      z-index: 200;
+      transition: width 0.1s;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+
+      main {
+        padding: 88px 1rem 5rem;
+      }
+
+      .hero {
+        padding: 2rem 0 3rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Progress bar -->
+  <div class="scroll-progress" id="progress"></div>
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-inner">
+      <div class="nav-brand">Alan Nascimento · Plano de Carreira</div>
+      <ul class="nav-links">
+        <li><a href="#direcao">Direção</a></li>
+        <li><a href="#pilares">Pilares</a></li>
+        <li><a href="#timeline">Timeline</a></li>
+        <li><a href="#biblioteca">Biblioteca</a></li>
+        <li><a href="#posicionamento">Posicionamento</a></li>
+        <li><a href="#pessoas">Pessoa</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Plano ativo — 2025–2028
+      </div>
+      <h1>Construindo um<br /><span>legado técnico</span></h1>
+      <p class="hero-sub">
+        Trajetória consolidada para se tornar referência em dados, automação e liderança técnica — do BI ao produto
+        analítico completo.
+      </p>
+      <div class="hero-identity">
+        <strong>Declaração de identidade:</strong><br />
+        Analista de dados generalista com foco em automação, engenharia de dados e BI. Transforma processos complexos em
+        soluções técnicas escaláveis — integrando SQL, Python, Fabric, AI Engineering e infraestrutura moderna para
+        entregar impacto real e reutilizável.
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-value">4</div>
+          <div class="stat-label">Pilares técnicos</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">3</div>
+          <div class="stat-label">Horizontes de tempo</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">10+</div>
+          <div class="stat-label">Ações imediatas</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">5+</div>
+          <div class="stat-label">Stacks dominadas</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Direção -->
+    <div class="section aos" id="direcao">
+      <div class="section-label">
+        <div class="icon bg-indigo" style="color:#818cf8; font-size:1.1rem">🎯</div>
+        <div>
+          <h2>Direção Principal <span style="color:var(--text3); font-weight:400; font-size:1rem">/ 3–5 anos</span></h2>
+          <p>Para onde toda ação está apontando</p>
+        </div>
+      </div>
+
+      <div class="direction-block">
+        <div>
+          <div class="direction-title">Tech Lead · Sênior · Data Product Owner</div>
+          <div class="direction-roles">
+            <span class="role-badge">Liderança técnica de dados</span>
+            <span class="role-badge">Automação corporativa</span>
+            <span class="role-badge">Engenharia de dados</span>
+            <span class="role-badge">Produtos analíticos escaláveis</span>
+            <span class="role-badge">Soluções ponta-a-ponta</span>
+            <span class="role-badge">Referência BI + Dados + Auto.</span>
+          </div>
+          <p style="font-size:0.85rem; color:var(--text2); line-height:1.7;">
+            A trajetória aponta para um perfil de <strong style="color:var(--text)">generalista técnico
+              estratégico</strong> — aquele que resolve problemas complexos com múltiplas stacks, conduz soluções de
+            ponta-a-ponta e se torna referência interna na interseção entre dados, automação e produto.
+          </p>
+        </div>
+        <div class="profile-badge">
+          <div class="profile-icon">🧠</div>
+          <div class="profile-label">Perfil alvo</div>
+          <div class="profile-value">AI Data Engineer<br />estratégico</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pilares Técnicos -->
+    <div class="section aos" id="pilares">
+      <div class="section-label">
+        <div class="icon bg-violet" style="font-size:1.1rem">🧱</div>
+        <div>
+          <h2>Pilares Técnicos</h2>
+          <p>As quatro frentes que sustentam a carreira</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+
+        <!-- BI -->
+        <div class="pillar-card">
+          <div class="accent-line line-violet"></div>
+          <div style="padding-left:0.5rem">
+            <div class="pillar-header">
+              <div class="pillar-icon bg-violet" style="color:#a78bfa">📊</div>
+              <div>
+                <div class="pillar-title c-violet">BI & Analytics</div>
+                <div class="pillar-sub">Base forte · Em consolidação</div>
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag tag-violet">Power BI Avançado</span>
+              <span class="tag tag-violet">DAX Avançado</span>
+              <span class="tag tag-violet">Modelagem Semântica</span>
+              <span class="tag tag-violet">Performance Tuning</span>
+              <span class="tag tag-violet">Templates Reutilizáveis</span>
+              <span class="tag tag-violet">Storytelling Analítico</span>
+              <span class="tag tag-violet">Design de Dashboards</span>
+              <span class="tag tag-violet">Certificação PL-300</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Engenharia de Dados -->
+        <div class="pillar-card">
+          <div class="accent-line line-cyan"></div>
+          <div style="padding-left:0.5rem">
+            <div class="pillar-header">
+              <div class="pillar-icon bg-cyan" style="color:#67e8f9">⚙️</div>
+              <div>
+                <div class="pillar-title c-cyan">Engenharia de Dados</div>
+                <div class="pillar-sub">DSA (Data Science Academy) · Pós em andamento</div>
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag tag-cyan">Python Pipelines</span>
+              <span class="tag tag-cyan">SQL Avançado</span>
+              <span class="tag tag-cyan">Databricks</span>
+              <span class="tag tag-cyan">Microsoft Fabric</span>
+              <span class="tag tag-cyan">AI Engineering</span>
+              <span class="tag tag-cyan">Orquestração</span>
+              <span class="tag tag-cyan">Data Quality</span>
+              <span class="tag tag-cyan">Observabilidade</span>
+              <span class="tag tag-cyan">Versionamento</span>
+              <span class="tag tag-cyan">Ingestão & Tratamento</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Infra & Dev -->
+        <div class="pillar-card">
+          <div class="accent-line line-green"></div>
+          <div style="padding-left:0.5rem">
+            <div class="pillar-header">
+              <div class="pillar-icon bg-green" style="color:#6ee7b7">🐳</div>
+              <div>
+                <div class="pillar-title c-green">Infraestrutura & Dev</div>
+                <div class="pillar-sub">Em aprendizado · Stack gradual</div>
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag tag-green">Docker</span>
+              <span class="tag tag-green">Kubernetes</span>
+              <span class="tag tag-green">Terraform</span>
+              <span class="tag tag-green">Git Avançado</span>
+              <span class="tag tag-green">CI/CD de Dados</span>
+              <span class="tag tag-green">Ambientes Reprodutíveis</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Automação Corporativa -->
+        <div class="pillar-card">
+          <div class="accent-line line-amber"></div>
+          <div style="padding-left:0.5rem">
+            <div class="pillar-header">
+              <div class="pillar-icon bg-amber" style="color:#fcd34d">⚡</div>
+              <div>
+                <div class="pillar-title c-amber">Automação Corporativa</div>
+                <div class="pillar-sub">Diferencial forte · Em expansão</div>
+              </div>
+            </div>
+            <div class="tags">
+              <span class="tag tag-amber">Power Automate</span>
+              <span class="tag tag-amber">Power Apps</span>
+              <span class="tag tag-amber">APIs</span>
+              <span class="tag tag-amber">Python & Bash</span>
+              <span class="tag tag-amber">PowerShell</span>
+              <span class="tag tag-amber">Bots de Processo</span>
+              <span class="tag tag-amber">Automações Multi-sistema</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Soft Skills -->
+    <div class="section aos">
+      <div class="section-label">
+        <div class="icon bg-rose" style="font-size:1.1rem">🧠</div>
+        <div>
+          <h2>Competências Humanas</h2>
+          <p>Ativos estratégicos de liderança e comunicação</p>
+        </div>
+      </div>
+
+      <div class="grid-2">
+        <div class="card" style="padding: 1.75rem 2rem;">
+          <h3
+            style="margin-bottom:1.25rem; font-size:0.85rem; color:var(--text3); text-transform:uppercase; letter-spacing:0.05em;">
+            Hoje — ja consolidado</h3>
+          <div class="skill-bar">
+            <div class="skill-bar-header"><span>Resolução de problemas</span><span class="c-green">★★★★★</span></div>
+            <div class="bar-track">
+              <div class="bar-fill bar-green" style="width:95%"></div>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-header"><span>Organização & método</span><span class="c-green">★★★★★</span></div>
+            <div class="bar-track">
+              <div class="bar-fill bar-green" style="width:90%"></div>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-header"><span>Colaboração técnica</span><span class="c-cyan">★★★★☆</span></div>
+            <div class="bar-track">
+              <div class="bar-fill bar-cyan" style="width:82%"></div>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-header"><span>Pensamento crítico</span><span class="c-green">★★★★★</span></div>
+            <div class="bar-track">
+              <div class="bar-fill bar-green" style="width:93%"></div>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-header"><span>Simplificação de complexidade</span><span class="c-cyan">★★★★☆</span>
+            </div>
+            <div class="bar-track">
+              <div class="bar-fill bar-cyan" style="width:85%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="padding: 1.75rem 2rem;">
+          <h3
+            style="margin-bottom:1.25rem; font-size:0.85rem; color:var(--text3); text-transform:uppercase; letter-spacing:0.05em;">
+            Foco — em desenvolvimento</h3>
+          <div class="skill-bar">
+            <div class="skill-bar-header"><span>Liderança informal</span><span class="c-amber">★★★☆☆</span></div>
+            <div class="bar-track">
+              <div class="bar-fill bar-amber" style="width:60%"></div>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-header"><span>Mentoria técnica</span><span class="c-amber">★★★☆☆</span></div>
+            <div class="bar-track">
+              <div class="bar-fill bar-amber" style="width:58%"></div>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-header"><span>Comunicação técnica clara</span><span class="c-violet">★★★★☆</span>
+            </div>
+            <div class="bar-track">
+              <div class="bar-fill bar-violet" style="width:72%"></div>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-header"><span>Influência sem autoridade</span><span class="c-amber">★★★☆☆</span></div>
+            <div class="bar-track">
+              <div class="bar-fill bar-amber" style="width:55%"></div>
+            </div>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-bar-header"><span>Documentação técnica</span><span class="c-cyan">★★★★☆</span></div>
+            <div class="bar-track">
+              <div class="bar-fill bar-cyan" style="width:70%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Timeline -->
+    <div class="section aos" id="timeline">
+      <div class="section-label">
+        <div class="icon bg-sky" style="font-size:1.1rem">🗺️</div>
+        <div>
+          <h2>Linha do Tempo</h2>
+          <p>O que construir em cada horizonte</p>
+        </div>
+      </div>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <div class="timeline-period period-short">⏱ H1 2026 &nbsp;·&nbsp; 0–6 meses</div>
+          <div class="timeline-title">Especialização e Automação</div>
+          <ul class="check-list">
+            <li>Inglês: 30min/semana no Cambly (Native Speakers)</li>
+            <li>Pós DSA: Conclusão de módulos Engenharia de Dados</li>
+            <li>O'Reilly & Coursera: Trilhas Unico Skill</li>
+            <li>Databricks - Generative AI Fundamentals</li>
+            <li>Microsoft - DP-900 - Azure Data Fundamentals</li>
+            <li>Microsoft - PL-300 - Power BI Data Analyst Associate</li>
+            <li>Notion - Notion Advanced</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-period period-medium">⏳ H2 2026 &nbsp;·&nbsp; 6–12 meses</div>
+          <div class="timeline-title">Engenharia e IA</div>
+          <ul class="check-list">
+            <li>Febraban - FBB-200 - Ouvidoria (Febraban)</li>
+            <li>Microsoft - AI-900 - Azure AI Fundamentals</li>
+            <li>Databricks - Data Engineer Associate</li>
+            <li>2–3 projetos E2E de eng. de dados</li>
+            <li>GitHub como vitrine técnica</li>
+            <li>Automações avançadas integradas</li>
+          </ul>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-period period-long">🕰 Estratégico &nbsp;·&nbsp; 18–36 meses</div>
+          <div class="timeline-title">Referência Técnica & AI Engineer</div>
+          <ul class="check-list">
+            <li>Mentoria Estratégica (Foco em Liderança)</li>
+            <li>Microsoft - DP-600 - Fabric Analytics Engineer Associate</li>
+            <li>Microsoft - DP-700 - Fabric Data Engineer Associate</li>
+            <li>Microsoft - AI-102 - Azure AI Engineer Associate</li>
+            <li>Referência técnica interna</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Biblioteca -->
+    <div class="section aos" id="biblioteca">
+      <div class="section-label">
+        <div class="icon bg-amber" style="font-size:1.1rem">📚</div>
+        <div>
+          <h2>Biblioteca Técnica & Pessoal</h2>
+          <p>Leituras estratégicas para fundamentação técnica e crescimento pessoal</p>
+        </div>
+      </div>
+
+      <div class="library-grid">
+        <!-- Engenharia de Dados & IA -->
+        <div class="library-category">
+          <h3><span class="c-cyan">⚙️</span> Engenharia de Dados & IA</h3>
+
+          <div class="book-item">
+            <div class="book-icon">🤖</div>
+            <div class="book-info">
+              <h4>AI Engineering: Building Applications with Foundation Models</h4>
+              <p>Chip Huyen · Guia essencial para construção de aplicações modernas baseadas em LLMs.</p>
+            </div>
+          </div>
+
+          <div class="book-item">
+            <div class="book-icon">🏗️</div>
+            <div class="book-info">
+              <h4>Fundamentos de Engenharia de Dados</h4>
+              <p>Joe Reis & Matt Housley · A "bíblia" para projetar e construir sistemas robustos.</p>
+            </div>
+          </div>
+
+          <div class="book-item">
+            <div class="book-icon">🛡️</div>
+            <div class="book-info">
+              <h4>Fundamentos da Qualidade de Dados</h4>
+              <p>Barr Moses et al. · Guia prático para criar pipelines confiáveis e observáveis.</p>
+            </div>
+          </div>
+
+          <div class="book-item">
+            <div class="book-icon">🏛️</div>
+            <div class="book-info">
+              <h4>Decifrando Arquiteturas de Dados</h4>
+              <p>James Serra · Comparativo estratégico entre Warehouse, Fabric, Lakehouse e Mesh.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Desenvolvimento Pessoal -->
+        <div class="library-category">
+          <h3><span class="c-rose">🧠</span> Desenvolvimento Pessoal</h3>
+
+          <div class="book-item">
+            <div class="book-icon">🦢</div>
+            <div class="book-info">
+              <h4>Antifrágil: Coisas que se beneficiam com o caos</h4>
+              <p>Nassim Nicholas Taleb · Mentalidade para prosperar em ambientes incertos e complexos.</p>
+            </div>
+          </div>
+
+          <div class="book-item">
+            <div class="book-icon">🦞</div>
+            <div class="book-info">
+              <h4>12 Regras Para a Vida: Um Antídoto Para o Caos</h4>
+              <p>Jordan B. Peterson · Princípios fundamentais para ordem e responsabilidade pessoal.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section aos" id="posicionamento">
+      <div class="section-label">
+        <div class="icon bg-amber" style="font-size:1.1rem">🧩</div>
+        <div>
+          <h2>Posicionamento Profissional</h2>
+          <p>Como você se apresenta e é percebido</p>
+        </div>
+      </div>
+
+      <div class="pos-grid">
+        <div class="pos-card">
+          <div class="big-icon">🔧</div>
+          <h3 class="c-violet">Resolvedor Independente</h3>
+          <p>Usa qualquer ferramenta necessária. Não limitado por stack. Entrega o que for preciso.</p>
+        </div>
+        <div class="pos-card">
+          <div class="big-icon">⚡</div>
+          <h3 class="c-amber">Construtor de Automações</h3>
+          <p>Elimina trabalho manual. Escala processos. Libera tempo humano para o que importa.</p>
+        </div>
+        <div class="pos-card">
+          <div class="big-icon">🔗</div>
+          <h3 class="c-cyan">Integrador de Áreas</h3>
+          <p>Conecta dados, processo e ferramenta. Entrega soluções que cruzam fronteiras organizacionais.</p>
+        </div>
+        <div class="pos-card">
+          <div class="big-icon">✖️</div>
+          <h3 class="c-green">Multiplicador</h3>
+          <p>Cria apps, fluxos e dashboards que ajudam equipes inteiras — escala o próprio impacto.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ações práticas -->
+    <div class="section aos">
+      <div class="section-label">
+        <div class="icon bg-green" style="font-size:1.1rem">🛠️</div>
+        <div>
+          <h2>Ações Práticas Definidas</h2>
+          <p>Execuções concretas já planejadas</p>
+        </div>
+      </div>
+
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon bg-violet" style="color:#a78bfa">📐</div>
+          <h3>Técnicas</h3>
+          <p>Template Power BI · Workflow padrão de dashboards · Projeto Docker + Python · Automação com API · Pipeline
+            versionado · Projeto Databricks</p>
+        </div>
+        <div class="card">
+          <div class="card-icon bg-cyan" style="color:#67e8f9">💼</div>
+          <h3>Portfólio</h3>
+          <p>Repositórios organizados · Projetos demonstráveis · READMEs técnicos claros · Exemplos E2E · Projeto de
+            classificação de vagas</p>
+        </div>
+        <div class="card">
+          <div class="card-icon bg-green" style="color:#6ee7b7">📈</div>
+          <h3>Crescimento</h3>
+          <p>Inglês técnico contínuo · Revisão semanal de roadmap · Mentoria de juniores · Documentação de aprendizados
+            · Estudo estruturado</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Dimensão Pessoal -->
+    <div class="section aos" id="pessoas">
+      <div class="section-label">
+        <div class="icon bg-rose" style="font-size:1.1rem">👤</div>
+        <div>
+          <h2>Dimensão Pessoal</h2>
+          <p>O sustento da evolução técnica e cognitiva</p>
+        </div>
+      </div>
+
+      <div class="personal-grid">
+        <div class="personal-card">
+          <span class="em">🏋️</span>
+          <div>
+            <h4>Energia Física</h4>
+            <p>Vida ativa, massa muscular, resistência — base de performance cognitiva.</p>
+          </div>
+        </div>
+        <div class="personal-card">
+          <span class="em">🧘</span>
+          <div>
+            <h4>Clareza Mental</h4>
+            <p>Sono adequado, nutrição funcional, hidratação e controle de fadiga mental.</p>
+          </div>
+        </div>
+        <div class="personal-card">
+          <span class="em">⏰</span>
+          <div>
+            <h4>Rotina Intencional</h4>
+            <p>Pausas, mobilidade, blocos de estudo e gestão de energia ao longo do dia.</p>
+          </div>
+        </div>
+        <div class="personal-card">
+          <span class="em">🌐</span>
+          <div>
+            <h4>Inglês Técnico</h4>
+            <p>Prática contínua para comunicação em contextos internacionais e técnicos.</p>
+          </div>
+        </div>
+        <div class="personal-card">
+          <span class="em">🗂️</span>
+          <div>
+            <h4>Gestão do Conhecimento</h4>
+            <p>Obsidian como base de organização e revisão semanal de aprendizados.</p>
+          </div>
+        </div>
+        <div class="personal-card">
+          <span class="em">🤝</span>
+          <div>
+            <h4>Mentoria & Ensino</h4>
+            <p>Orientar juniores reforça o domínio técnico e desenvolve liderança natural.</p>
+          </div>
+        </div>
+        <div class="personal-card">
+          <span class="em">🎯</span>
+          <div>
+            <h4>Constância</h4>
+            <p>Disciplina de estudo, clareza de metas e revisão contínua do roadmap.</p>
+          </div>
+        </div>
+        <div class="personal-card">
+          <span class="em">🔍</span>
+          <div>
+            <h4>Perfil Autodidata</h4>
+            <p>Orientado a melhoria contínua, construtor de soluções e transformador de processos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer>
+    Alan Nascimento &nbsp;·&nbsp; Plano de Carreira 2025–2028 &nbsp;·&nbsp; Atualizado em fevereiro de 2026
+  </footer>
+
+  <script>
+    // Scroll progress bar
+    const progress = document.getElementById('progress');
+    window.addEventListener('scroll', () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      progress.style.width = (window.scrollY / max * 100) + '%';
+    });
+
+    // Animate on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.aos').forEach(el => observer.observe(el));
+
+    // Animate bars on load
+    window.addEventListener('load', () => {
+      document.querySelectorAll('.bar-fill').forEach(bar => {
+        const w = bar.style.width;
+        bar.style.width = '0';
+        setTimeout(() => { bar.style.width = w; }, 400);
+      });
+    });
+  </script>
+
+</body>
+
+</html>
